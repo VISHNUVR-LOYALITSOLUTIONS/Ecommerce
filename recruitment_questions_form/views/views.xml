@@ -293,7 +293,7 @@
 
 
 
-       <menuitem id="myform_ID" name="Recruitment Questions Form" />
+       <menuitem id="myform_ID" name="Recruitment Questions Form"/>
 
          <menuitem id="myform_menu_ID" name="Recruitment Questions Form" parent="myform_ID"  />
 
