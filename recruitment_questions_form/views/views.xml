@@ -19,6 +19,17 @@
                         <span class="o_stat_text">Recruitment Questions</span>
                     </div>
                 </button>
+
+
+                 <button name="tree_view_action_questions_value"
+                    class="oe_stat_button"
+                    icon="fa-user"
+                    type="object"
+                  >
+                    <div class="o_field_widget o_stat_info">
+                        <span class="o_stat_text">List Of Recruitment Questions</span>
+                    </div>
+                </button>
             </xpath>
         </field>
 
@@ -54,6 +65,8 @@
                               <field name="candidate_name"/>
 
                             <field name="entering_date"/>
+
+                  <field name="position"/>
 
               </tree>
       </field>
@@ -141,7 +154,7 @@
                                     <control>
                                         <create name="add_product_control" string="Add a Question"/>
                                         <!--<create name="add_section_control" string="Add a section"/>-->
-                                        <create name="add_note_control" string="Add a note" />
+                                        <create name="add_note_control" string="Add a note" context="{'default_display_type': 'line_note'}"/>
                                     </control>
 
                                         <field name="recruitment_quest"/>
@@ -175,7 +188,7 @@
                                     <control>
                                         <create name="add_product_control" string="Add a Question"/>
                                         <!--<create name="add_section_control" string="Add a section"/>-->
-                                        <create name="add_note_control" string="Add a note" />
+                                        <create name="add_note_control" string="Add a note" context="{'default_display_type': 'line_note'}"/>
                                     </control>
 
                                         <field name="name"/>
