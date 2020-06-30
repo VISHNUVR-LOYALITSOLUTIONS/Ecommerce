@@ -11,11 +11,15 @@ class AccountAnalyticLine(models.Model):
 
     total_attendance = fields.Float("Total Attendance",default=0.0)
 
-    hr_work_entry_ids = fields.Many2many(
-        comodel_name='hr.work.entry', string='Related work Entry', readonly=True,
-        copy=False,
-        help="Related work Entry"
-             )
+    work_entry_type = fields.Many2one('hr.work.entry.type',string='Work Entry Type')
+
+
+
+    # hr_work_entry_ids = fields.Many2many(
+    #     comodel_name='hr.work.entry', string='Related work Entry', readonly=True,
+    #     copy=False,
+    #     help="Related work Entry"
+    #          )
 
     # @api.multi
     # @api.depends('picking_ids')
@@ -84,7 +88,8 @@ class Hrprojects(models.Model):
             'project_id': self.project_id.id,
             'total_attendance': self.total_work_attendance,
             'unit_amount':self.duration,
-            'name':self.name
+            'name':self.name,
+            'work_entry_type': self.work_entry_type_id.id
             # 'so_line':1
 
         }

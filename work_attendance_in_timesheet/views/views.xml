@@ -11,7 +11,7 @@
                     <field name="total_attendance" widget="timesheet_uom" invisible="1"/>
                      <!--<notebook>-->
                  <!--<page string="Work Entry" name="work_entry" attrs="{'invisible': [('hr_work_entry_ids', '=', [])]}">-->
-                    <!--<field name="hr_work_entry_ids"/>-->
+                    <field name="work_entry_type"/>
                 <!--</page>-->
             <!--</notebook>-->
                  </xpath>
@@ -21,23 +21,23 @@
         </record>
 
 
-       <!--<record id="tree_totalhr_total_attendance" model="ir.ui.view">-->
-            <!--<field name="name">hr.attendance.tree</field>-->
-            <!--<field name="model">account.analytic.line</field>-->
-            <!--<field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree" />-->
-            <!--<field name="arch" type="xml">-->
-                 <!--<field name='unit_amount' position="before">-->
-                    <!--<field name="total_attendance" widget="timesheet_uom" readonly="1"/>-->
-                     <!--&lt;!&ndash;<notebook>&ndash;&gt;-->
-                 <!--&lt;!&ndash;<page string="Work Entry" name="work_entry" attrs="{'invisible': [('hr_work_entry_ids', '=', [])]}">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<field name="hr_work_entry_ids"/>&ndash;&gt;-->
-                <!--&lt;!&ndash;</page>&ndash;&gt;-->
-            <!--&lt;!&ndash;</notebook>&ndash;&gt;-->
-                 <!--</field>-->
+       <record id="tree_totalhr_total_attendance" model="ir.ui.view">
+            <field name="name">hr.attendance.tree</field>
+            <field name="model">account.analytic.line</field>
+            <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree" />
+            <field name="arch" type="xml">
+                 <field name='unit_amount' position="before">
+                    <field name="total_attendance" widget="timesheet_uom" invisible="1"/>
+                     <!--<notebook>-->
+                 <!--<page string="Work Entry" name="work_entry" attrs="{'invisible': [('hr_work_entry_ids', '=', [])]}">-->
+                    <field name="work_entry_type"/>
+                <!--</page>-->
+            <!--</notebook>-->
+                 </field>
 
 
-            <!--</field>-->
-        <!--</record>-->
+            </field>
+        </record>
 
 
 
@@ -50,7 +50,7 @@
                     <field name="total_attendance" widget="timesheet_uom" invisible="1"/>
                      <!--<notebook position="inside">-->
                 <!--<page string="Work Entry" name="work_entry" attrs="{'invisible': [('hr_work_entry_ids', '=', [])]}">-->
-                    <!--<field name="hr_work_entry_ids"/>-->
+                    <field name="work_entry_type"/>
                 <!--</page>-->
             <!--</notebook>-->
                  </xpath>

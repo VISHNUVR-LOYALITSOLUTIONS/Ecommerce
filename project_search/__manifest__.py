@@ -1,17 +1,16 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "work_attendance_in_timesheet",
+    'name': "project_search",
 
     'summary': """
-        work attendance in timesheet""",
+        project search with Search ID""",
 
     'description': """
-        work attendance in timesheet
+        project search with Search ID
     """,
 
     'author': "Loyal IT Solutions Pvt. Ltd.",
     'website': "http://www.loyalitsolutions.com",
-
 
     # Categories can be used to filter modules in modules listing
     # Check https://github.com/odoo/odoo/blob/13.0/odoo/addons/base/data/ir_module_category_data.xml
@@ -20,7 +19,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','hr','hr_timesheet','hr_work_entry','timesheet_grid',],
+    'depends': ['base','project'],
 
     # always loaded
     'data': [
