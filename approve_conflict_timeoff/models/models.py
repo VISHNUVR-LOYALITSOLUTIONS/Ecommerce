@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
-from odoo import models, fields, api
+from odoo import models, fields, api,_
+from odoo.exceptions import ValidationError
+
 from datetime import datetime
 from datetime import date, timedelta
 
@@ -21,6 +23,9 @@ class Approve_Conflict(models.Model):
         for i in hr_leaves:
             i.state = 'draft'
         hr_leaves.unlink()
+        if not self.time_off_type:
+            raise ValidationError(_('For the approve time off please fill the Leave type.'))
+
         self.env['hr.leave'].create({
             'name': 'Compensatory Time Off',
             'employee_id': self.employee_id.id,
