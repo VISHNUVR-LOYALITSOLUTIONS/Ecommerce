@@ -22,7 +22,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','hr_work_entry','hr_contract'],
+    'depends': ['base','hr_work_entry','hr_contract','hr_payroll'],
 
     # always loaded
     'data': [
@@ -30,6 +30,7 @@
         'security/approval_security.xml',
         'views/views.xml',
         'views/templates.xml',
+        'views/action_window.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
